@@ -1,13 +1,26 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="">
 <head>
-  <meta charset="utf-8">
-  <title>Sumit</title>
-  <base href="/">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
+
 <body>
-  <app-root></app-root>
+    <div class="h">
+        <label for="not">Enter Number of Teams</label>
+        <input name ="not" type="number" id="notinput"><br>
+        <label for="nop">Enter Number of Pools</label>
+        <input type="number" name="nop" id="nopinput"><br>
+        <label for="tn" id="ltn">Enter Team Names</label>
+        <textarea type="text" name="tn" id="teamId"></textarea><br>
+        <input type="checkbox" id="chkbx" value="checked" name="name">
+        <label id="name" for="name"> Want to enter name of teams now</label><br>
+        <button id="btn">Generate Brackets</button>    
+    </div>
+    <div class="brackets" id="brackets"></div> 
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="crossorigin="anonymous"></script>  
+    <script src="https://underscorejs.org/underscore.js" ></script>
 </body>
 </html>

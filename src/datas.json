@@ -1,0 +1,260 @@
+{
+    "data" : [
+        {
+            "teamId": "Team A",
+            "Score": "20"
+        },
+        {
+            "teamId": "Team B",
+            "Score": "02"
+        },
+        {
+            "teamId": "Team C",
+            "Score": "22"
+        },
+        {
+            "teamId": "Team D",
+            "Score": "03"
+        },
+        {
+            "teamId": "Team E",
+            "Score": "43"
+        },
+        {
+            "teamId": "Team F",
+            "Score": "34"
+        },
+        {
+            "teamId": "Team G",
+            "Score": "04"
+        },
+        {
+            "teamId": "Team H",
+            "Score": "05"
+        },
+        {
+            "teamId": "Team I",
+            "Score": "06"
+        },
+        {
+            "teamId": "Team J",
+            "Score": "07"
+        },
+        {
+            "teamId": "Team K",
+            "Score": "08"
+        },
+        {
+            "teamId": "Team L",
+            "Score": "09"
+        },
+        {
+            "teamId": "Team M",
+            "Score": "10"
+        },
+        {
+            "teamId": "Team N",
+            "Score": "11"
+        },
+        {
+            "teamId": "Team O",
+            "Score": "12"
+        },
+        {
+            "teamId": "Team P",
+            "Score": "10"
+        },
+        {
+            "teamId": "Team Q",
+            "Score": "13"
+        },
+        {
+            "teamId": "Team R",
+            "Score": "15"
+        },
+        {
+            "teamId": "Team S",
+            "Score": "16"
+        },
+        {
+            "teamId": "Team T",
+            "Score": "17"
+        },
+        {
+            "teamId": "Team U",
+            "Score": "18"
+        },
+        {
+            "teamId": "Team V",
+            "Score": "19"
+        },
+        {
+            "teamId": "Team W",
+            "Score": "21"
+        },
+        {
+            "teamId": "Team X",
+            "Score": "23"
+        },
+        {
+            "teamId": "Team Y",
+            "Score": "24"
+        },
+        {
+            "teamId": "Team Z",
+            "Score": "25"
+        },
+        {
+            "teamId": "Team AA",
+            "Score": "26"
+        },
+        {
+            "teamId": "Team AB",
+            "Score": "27"
+        },
+        {
+            "teamId": "Team AC",
+            "Score": "28"
+        },
+        {
+            "teamId": "Team AD",
+            "Score": "29"
+        },
+        {
+            "teamId": "Team AE",
+            "Score": "30"
+        },
+        {
+            "teamId": "Team AF",
+            "Score": "31"
+        },
+        {
+            "teamId": "Team AG",
+            "Score": "32"
+        },
+        {
+            "teamId": "Team AH",
+            "Score": "33"
+        },
+        {
+            "teamId": "Team AI",
+            "Score": "35"
+        },
+        {
+            "teamId": "Team AJ",
+            "Score": "36"
+        },
+        {
+            "teamId": "Team AK",
+            "Score": "37"
+        },
+        {
+            "teamId": "Team AL",
+            "Score": "38"
+        },
+        {
+            "teamId": "Team AM",
+            "Score": "39"
+        },
+        {
+            "teamId": "Team AN",
+            "Score": "40"
+        },
+        {
+            "teamId": "Team AO",
+            "Score": "41"
+        },
+        {
+            "teamId": "Team AP",
+            "Score": "42"
+        },
+        {
+            "teamId": "Team AQ",
+            "Score": "43"
+        },
+        {
+            "teamId": "Team AR",
+            "Score": "44"
+        },
+        {
+            "teamId": "Team AS",
+            "Score": "45"
+        },
+        {
+            "teamId": "Team AT",
+            "Score": "46"
+        },
+        {
+            "teamId": "Team AU",
+            "Score": "47"
+        },
+        {
+            "teamId": "Team AV",
+            "Score": "48"
+        },
+        {
+            "teamId": "Team AW",
+            "Score": "49"
+        },
+        {
+            "teamId": "Team AX",
+            "Score": "50"
+        },
+        {
+            "teamId": "Team AY",
+            "Score": "51"
+        },
+        {
+            "teamId": "Team AZ",
+            "Score": "52"
+        },
+        {
+            "teamId": "Team BA",
+            "Score": "53"
+        },
+        {
+            "teamId": "Team BB",
+            "Score": "54"
+        },
+        {
+            "teamId": "Team BC",
+            "Score": "55"
+        },
+        {
+            "teamId": "Team BD",
+            "Score": "56"
+        },
+        {
+            "teamId": "Team BE",
+            "Score": "57"
+        },
+        {
+            "teamId": "Team BF",
+            "Score": "58"
+        },
+        {
+            "teamId": "Team BG",
+            "Score": "59"
+        },
+        {
+            "teamId": "Team BH",
+            "Score": "60"
+        },
+        {
+            "teamId": "Team BI",
+            "Score": "61"
+        },
+        {
+            "teamId": "Team BJ",
+            "Score": "62"
+        },
+        {
+            "teamId": "Team BK",
+            "Score": "63"
+        },
+        {
+            "teamId": "Team BL",
+            "Score": "64"
+        }
+    ]
+}
