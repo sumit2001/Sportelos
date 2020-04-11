@@ -11,6 +11,12 @@ textarea{
     width: 200px;
 }
 
+#tT{
+    width:200px;
+    height:30px;
+    font-size: .95em;
+}
+
 .h{
     background-color: grey;
     padding-top:50px;
@@ -99,10 +105,10 @@ p{
 
 }
 
-.brackets div.bracketbox > span.info1 {
+span.info1 {
     position: absolute;
     z-index: 1;
-    margin-top: -12px;
+    margin-top: -13px;
     margin-left:1px;
     height:31px;
     width:37px;
@@ -114,10 +120,10 @@ p{
     padding-top: 5px;
 }
 
-.brackets div.bracketbox > span.info2 {
+span.info2 {
     position: absolute;
     z-index: 1;
-    bottom: -13px;
+    bottom: -12px;
     height:31px;
     width:37px;
     background-color:#A19797;
@@ -128,7 +134,7 @@ p{
     padding-top: 5px;
 }
 
-.brackets div.bracketbox > span.teama {
+span.teama {
     top: -13.5px;
     background-color: white;    
     height:33px;
@@ -142,7 +148,7 @@ p{
     overflow: hidden;
 }
 
-.brackets div.bracketbox > span.teamb {
+span.teamb {
     bottom: -13.5px;
     background-color: white;
     border: 1px solid black;
@@ -271,4 +277,120 @@ p{
 
 .brackets > div > div > div:last-of-type {
     margin-bottom: 0px;
+}
+
+.bracketsR > div {
+    vertical-align: left;
+    margin-top: 20px;
+}
+
+.bracketsR > div > div {
+    float: left;
+    width: 20%;
+}
+.bracketsR div.bracketboxR {
+    position: relative;
+    height: 80px;
+}
+
+.bracketsR div.bracketboxR > span {
+    position: absolute;
+    left: 40px;
+    font-size: 0.85em;
+}
+
+span.info1R {
+    position: absolute;
+    z-index: 1;
+    margin-top: 14px;
+    margin-left:1px;
+    height:31px;
+    width:37px;
+    background-color:#A19797;
+    font-family: "Segoe UI";
+    font-weight:600;
+    font-size:13px;
+    text-align: center;
+    padding-top: 5px;
+}
+
+span.info2R {
+    position: absolute;
+    z-index: 1;
+    bottom: 2px;
+    height:31px;
+    width:37px;
+    background-color:#A19797;
+    font-family: "Segoe UI";
+    font-weight:600;
+    font-size:13px;
+    text-align: center;
+    padding-top: 5px;
+}
+
+span.teamaR {
+    top: 13.5px;
+    background-color: white;    
+    height:33px;
+    width:144px;
+    border: 1px solid #707070;
+    font-family: "Segoe UI";
+    font-weight:600;
+    font-size:14px;
+    padding-top:5px;
+    padding-left:42px;
+    overflow: hidden;
+}
+
+span.teambR {
+    bottom: 0.5px;
+    background-color: white;
+    border: 1px solid black;
+    height:33px;
+    width:144px;
+    border: 1px solid #707070;
+    font-family: "Segoe UI";
+    font-weight:600;
+    font-size:14px;
+    padding-top:5px;
+    padding-left:42px;
+    overflow: hidden;
+}
+
+
+.bracketsR > .groupR1 > div {
+    height:200px;
+    width:100%;        
+}
+
+.bracketsR > .groupR2 > div {
+    height:300px;
+    width:100%;        
+}
+
+.bracketsR > .groupR3 > div {
+    height:400px;
+    width:100%;        
+}
+
+.bracketsR > .groupR4 > div {
+    height:500px;
+    width:100%;        
+}
+
+.bracketsR > .groupR5 > div {
+    height:600px;
+    width:100%;        
+}
+
+.bracketsR > .groupR6 > div {
+    height:700px;
+    width:100%;        
+}
+
+.bracketsR > div > .r > div {
+    width:300px;
+    height:100px;
+    position:relative;
+    float: left;
 }

@@ -11,6 +11,11 @@
     <div class="h">
         <label for="not">Enter Number of Teams</label>
         <input name ="not" type="number" id="notinput"><br>
+        <label for="tT">Tournament Type</label>
+        <select id="tT">
+          <option value="sE">Single Elimination</option>
+          <option value="rR">Round Robin</option>
+        </select><br>
         <label for="nop">Enter Number of Pools</label>
         <input type="number" name="nop" id="nopinput"><br>
         <label for="tn" id="ltn">Enter Team Names</label>
@@ -19,6 +24,7 @@
         <label id="name" for="name"> Want to enter name of teams now</label><br>
         <button id="btn">Generate Brackets</button>    
     </div>
+    <div class="bracketsR" id="bracketsR"></div>
     <div class="brackets" id="brackets"></div> 
     <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="crossorigin="anonymous"></script>  
     <script src="https://underscorejs.org/underscore.js" ></script>

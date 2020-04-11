@@ -1,44 +1,97 @@
 
 $("#btn").click(function(){
     $('#brackets').html("");
+    $('#bracketsR').html("");
 
     var opts = $("#notinput").val(),
-//      opts = 16,
         pools = $("#nopinput").val(),
-//      pools = 1,
-        // Teams = JSON.parse(data),
         knownBrackets = [2,4,8,16,32,64], // brackets with "perfect" proportions (full fields, no byes)
         bracketCount = 0,
         closest 		= _.find(knownBrackets, function(k) {
                                     return k>=opts;
-                                    });
-    var Teams=[{"teamId" : "Team A", "Score" : "20"},{"teamId" : "Team B", "Score" : "02"},{"teamId" : "Team C", "Score" : "22"},{"teamId" : "Team D", "Score" : "03"},{"teamId" : "Team E", "Score" : "43"},{"teamId" : "Team F", "Score" : "34"},{"teamId" : "Team G", "Score" : "04"},{"teamId" : "Team H", "Score" : "05"},{"teamId" : "Team I", "Score" : "06"},{"teamId" : "Team J", "Score" : "07"},{"teamId" : "Team K", "Score" : "08"},{"teamId" : "Team L", "Score" : "09"},{"teamId" : "Team M", "Score" : "10"},{"teamId" : "Team N", "Score" : "11"},{"teamId" : "Team O", "Score" : "12"},{"teamId" : "Team P", "Score" : "10"},{"teamId" : "Team Q", "Score" : "13"},{"teamId" : "Team R", "Score" : "15"},{"teamId" : "Team S", "Score" : "16"},{"teamId" : "Team T", "Score" : "17"},{"teamId" : "Team U", "Score" : "18"},{"teamId" : "Team V", "Score" : "19"},{"teamId" : "Team W", "Score" : "21"},{"teamId" : "Team X", "Score" : "23"},{"teamId" : "Team Y", "Score" : "24"},{"teamId" : "Team Z", "Score" : "25"},{"teamId" : "Team AA", "Score" : "26"},{"teamId" : "Team AB", "Score" : "27"},{"teamId" : "Team AC", "Score" : "28"},{"teamId" : "Team AD", "Score" : "29"},{"teamId" : "Team AE", "Score" : "30"},{"teamId" : "Team AF", "Score" : "31"},{"teamId" : "Team AG", "Score" : "32"},{"teamId" : "Team AH", "Score" : "33"},{"teamId" : "Team AI", "Score" : "35"},{"teamId" : "Team AJ", "Score" : "36"},{"teamId" : "Team AK", "Score" : "37"},{"teamId" : "Team AL", "Score" : "38"},{"teamId" : "Team AM", "Score" : "39"},{"teamId" : "Team AN", "Score" : "40"},{"teamId" : "Team AO", "Score" : "41"},{"teamId" : "Team AP", "Score" : "42"},{"teamId" : "Team AQ", "Score" : "43"},{"teamId" : "Team AR", "Score" : "44"},{"teamId" : "Team AS", "Score" : "45"},{"teamId" : "Team AT", "Score" : "46"},{"teamId" : "Team AU", "Score" : "47"},{"teamId" : "Team AV", "Score" : "48"},{"teamId" : "Team AW", "Score" : "49"},{"teamId" : "Team AX", "Score" : "50"},{"teamId" : "Team AY", "Score" : "51"},{"teamId" : "Team AZ", "Score" : "52"},{"teamId" : "Team BA", "Score" : "53"},{"teamId" : "Team BB", "Score" : "54"},{"teamId" : "Team BC", "Score" : "55"},{"teamId" : "Team BD", "Score" : "56"},{"teamId" : "Team BE", "Score" : "57"},{"teamId" : "Team BF", "Score" : "58"},{"teamId" : "Team BG", "Score" : "59"},{"teamId" : "Team BH", "Score" : "60"},{"teamId" : "Team BI", "Score" : "61"},{"teamId" : "Team BJ", "Score" : "62"},{"teamId" : "Team BK", "Score" : "63"},{"teamId" : "Team BL", "Score" : "64"}];
+                                    }),
+        Teams=[{"teamId" : "Team A", "Score" : "20"},{"teamId" : "Team B", "Score" : "02"},{"teamId" : "Team C", "Score" : "22"},{"teamId" : "Team D", "Score" : "03"},{"teamId" : "Team E", "Score" : "43"},{"teamId" : "Team F", "Score" : "34"},{"teamId" : "Team G", "Score" : "04"},{"teamId" : "Team H", "Score" : "05"},{"teamId" : "Team I", "Score" : "06"},{"teamId" : "Team J", "Score" : "07"},{"teamId" : "Team K", "Score" : "08"},{"teamId" : "Team L", "Score" : "09"},{"teamId" : "Team M", "Score" : "10"},{"teamId" : "Team N", "Score" : "11"},{"teamId" : "Team O", "Score" : "12"},{"teamId" : "Team P", "Score" : "10"},{"teamId" : "Team Q", "Score" : "13"},{"teamId" : "Team R", "Score" : "15"},{"teamId" : "Team S", "Score" : "16"},{"teamId" : "Team T", "Score" : "17"},{"teamId" : "Team U", "Score" : "18"},{"teamId" : "Team V", "Score" : "19"},{"teamId" : "Team W", "Score" : "21"},{"teamId" : "Team X", "Score" : "23"},{"teamId" : "Team Y", "Score" : "24"},{"teamId" : "Team Z", "Score" : "25"},{"teamId" : "Team AA", "Score" : "26"},{"teamId" : "Team AB", "Score" : "27"},{"teamId" : "Team AC", "Score" : "28"},{"teamId" : "Team AD", "Score" : "29"},{"teamId" : "Team AE", "Score" : "30"},{"teamId" : "Team AF", "Score" : "31"},{"teamId" : "Team AG", "Score" : "32"},{"teamId" : "Team AH", "Score" : "33"},{"teamId" : "Team AI", "Score" : "35"},{"teamId" : "Team AJ", "Score" : "36"},{"teamId" : "Team AK", "Score" : "37"},{"teamId" : "Team AL", "Score" : "38"},{"teamId" : "Team AM", "Score" : "39"},{"teamId" : "Team AN", "Score" : "40"},{"teamId" : "Team AO", "Score" : "41"},{"teamId" : "Team AP", "Score" : "42"},{"teamId" : "Team AQ", "Score" : "43"},{"teamId" : "Team AR", "Score" : "44"},{"teamId" : "Team AS", "Score" : "45"},{"teamId" : "Team AT", "Score" : "46"},{"teamId" : "Team AU", "Score" : "47"},{"teamId" : "Team AV", "Score" : "48"},{"teamId" : "Team AW", "Score" : "49"},{"teamId" : "Team AX", "Score" : "50"},{"teamId" : "Team AY", "Score" : "51"},{"teamId" : "Team AZ", "Score" : "52"},{"teamId" : "Team BA", "Score" : "53"},{"teamId" : "Team BB", "Score" : "54"},{"teamId" : "Team BC", "Score" : "55"},{"teamId" : "Team BD", "Score" : "56"},{"teamId" : "Team BE", "Score" : "57"},{"teamId" : "Team BF", "Score" : "58"},{"teamId" : "Team BG", "Score" : "59"},{"teamId" : "Team BH", "Score" : "60"},{"teamId" : "Team BI", "Score" : "61"},{"teamId" : "Team BJ", "Score" : "62"},{"teamId" : "Team BK", "Score" : "63"},{"teamId" : "Team BL", "Score" : "64"}];
         
-        
-        
-//    var k="pool";
-//    Teams="";
-//    Teams = JSON.parse(pool1);
     if($("input[type='checkbox']").prop("checked")==true){
-    var teams=[];
-//    var team={
-//        teamId:document.getElementById('teamId').value
-//    }
-    
-    Teams=[{"teamId":"","Score":"1"},{"teamId":"","Score":"2"},{"teamId":"","Score":"1"},{"teamId":"","Score":"2"},{"teamId":"","Score":"1"},{"teamId":"","Score":"7"},{"teamId":"","Score":"1"},{"teamId":"","Score":"2"},{"teamId":"","Score":"1"},{"teamId":"","Score":"6"},{"teamId":"","Score":"1"},{"teamId":"","Score":"2"},{"teamId":"","Score":"1"},{"teamId":"","Score":"32"},{"teamId":"","Score":"1"},{"teamId":"","Score":"2"},{"teamId":"","Score":"1"},{"teamId":"","Score":"4"},{"teamId":"","Score":"1"},{"teamId":"","Score":"2"},{"teamId":"","Score":"1"},{"teamId":"","Score":"24"},{"teamId":"","Score":"1"},{"teamId":"","Score":"2"},{"teamId":"","Score":"1"},{"teamId":"","Score":"42"},{"teamId":"","Score":"1"},{"teamId":"","Score":"2"},{"teamId":"","Score":"1"},{"teamId":"","Score":"22"}];
-    
-    var lines = $('textarea').val().split('\n');
+        var teams=[];
+        
+        Teams=[{"teamId":"","Score":"1"},{"teamId":"","Score":"2"},{"teamId":"","Score":"1"},{"teamId":"","Score":"2"},{"teamId":"","Score":"1"},{"teamId":"","Score":"7"},{"teamId":"","Score":"1"},{"teamId":"","Score":"2"},{"teamId":"","Score":"1"},{"teamId":"","Score":"6"},{"teamId":"","Score":"1"},{"teamId":"","Score":"2"},{"teamId":"","Score":"1"},{"teamId":"","Score":"32"},{"teamId":"","Score":"1"},{"teamId":"","Score":"2"},{"teamId":"","Score":"1"},{"teamId":"","Score":"4"},{"teamId":"","Score":"1"},{"teamId":"","Score":"2"},{"teamId":"","Score":"1"},{"teamId":"","Score":"24"},{"teamId":"","Score":"1"},{"teamId":"","Score":"2"},{"teamId":"","Score":"1"},{"teamId":"","Score":"42"},{"teamId":"","Score":"1"},{"teamId":"","Score":"2"},{"teamId":"","Score":"1"},{"teamId":"","Score":"22"}];
+        
+        var lines = $('textarea').val().split('\n');
         for(var i = 0;i < lines.length;i++){
             var team=lines[i];
             Teams[i].teamId=team;
+        }
     }
+
+    if($("#tT").val()=="sE")
+        getSingleBracket(opts);
+    else
+        getRoundBracket(opts);
+
+    function getRoundBracket(tTeams){
+        var tRounds=tTeams-1,
+            round=1,
+            count=1,
+            brackets= [];
+        Tournament(tTeams);
+
+        function Tournament (n) {
+            this.rounds = Array()
+            this.N = n
+            for (var r=1; r<n; r++) 
+                this.rounds.push (new Round(r,n))
+        }
+
+        function Round (r, n) {
+            this.pairs = Array()
+            this.r = r
+            this.n = n
+            for (var i=1; i<=n/2; i++) {
+                if (i==1) { this.pairs.push (new Pair(         1          , (r+n-i-1) % (n-1) + 2 )) }
+                else { this.pairs.push (new Pair( (r+i-2) % (n-1) + 2, (r+n-i-1) % (n-1) + 2 )) }
+            }
+        }
+
+        function Pair (one, two) {
+            this.one = one
+            this.two = two    
+            brackets.push({
+                            teamnames:	[Teams[one-1].teamId,Teams[two-1].teamId],
+                            scores:     [Teams[one-1].Score,Teams[two-1].Score],
+                            roundNo:	round
+                        });
+            if(count==parseInt(tTeams/2)){
+                round++;
+                count=0;
+            }
+            count++;
+        }
+
+        renderRoundBrackets(brackets);
+
+        function renderRoundBrackets(struct){    
+            var groupCount	= _.uniq(_.map(struct, function(s) { return s.roundNo; })).length,
+                grouped = _.groupBy(struct, function(s) { 
+                        return s.roundNo;
+                    }),
+                grouplen=parseInt((tTeams-2)/8),
+                group	= $('<div class="groupR'+(grouplen+1)+'" id="b1"></div>');
+
+            for(var g=1;g<=groupCount;g++){
+                var round = $('<div class="r"></div>');
+                round.append('<h3>Round '+g+'</h3>');
+                for(var i=0;i<grouped[g].length;i++){
+                    var gg=grouped[g][i];
+                    round.append('<div><div class="bracketboxR"><span class="info1R">'+gg.scores[0]+'</span><span class="info2R">'+gg.scores[1]+'</span><span class="teamaR">'+gg.teamnames[0]+'</span><span class="teambR">'+gg.teamnames[1]+'</span></div></div>');
+                }
+                group.append(round);
+            }
+            $('#bracketsR').append(group);
+        }
     }
-//    localStorage.setItem('Teams',JSON.stringify(teams));
 
-    getBracket(opts);
-    
-    function getBracket(base) {
-
+    function getSingleBracket(base) {
         var byes 			= closest-base;
         if(byes>0)
             base = closest;
